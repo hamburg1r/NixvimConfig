@@ -4,7 +4,7 @@ let
 in
 [
   # Git Operations
-  { key = "<leader>go"; action = if config.plugins.snacks.enable then mkRaw "function() Snacks.lazygit.open() end" else mkRaw "function() vim.notify('Snacks.lazygit.open() not replaced, consider a dedicated lazygit integration', vim.log.levels.WARN) end"; options = { desc = "[O]pen LazyGit"; }; plugin = if config.plugins.snacks.enable then "snacks" else "native"; }
+  { key = "<leader>go"; action = if config.plugins.snacks.enable then mkRaw "function() Snacks.lazygit.open() end" else mkRaw "function() require('neogit').open() end"; options = { desc = "[O]pen Git Ui"; }; plugin = if config.plugins.snacks.enable then "snacks" else "native"; }
   { key = "<leader>gb"; action = if config.plugins.snacks.enable then mkRaw "function() Snacks.picker.git_branches() end" else mkRaw "function() require('telescope.builtin').git_branches() end"; options = { desc = "[B]ranch"; }; plugin = if config.plugins.snacks.enable then "snacks" else "telescope"; }
   { key = "<leader>gd"; action = if config.plugins.snacks.enable then mkRaw "function() Snacks.picker.git_diff() end" else mkRaw "function() require('telescope.builtin').git_diff_files() end"; options = { desc = "[D]iff"; }; plugin = if config.plugins.snacks.enable then "snacks" else "telescope"; }
   { key = "<leader>gl"; action = if config.plugins.snacks.enable then mkRaw "function() Snacks.picker.git_log() end" else mkRaw "function() require('telescope.builtin').git_commits() end"; options = { desc = "[L]og"; }; plugin = if config.plugins.snacks.enable then "snacks" else "telescope"; }
