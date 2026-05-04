@@ -18,7 +18,6 @@
     ./lz-n.nix
     ./markdown.nix
     ./mini.nix
-    ./neo-tree.nix
     ./nix.nix
     ./none-ls.nix
     ./oil.nix
