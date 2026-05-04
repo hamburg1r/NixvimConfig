@@ -35,6 +35,6 @@ in
   { key = "<leader>ghQ"; action = mkRaw "function() require('gitsigns').setqflist('all') end"; options = { desc = "[Q]uickfix All"; }; plugin = "gitsigns"; }
   { key = "<leader>ghq"; action = mkRaw "function() require('gitsigns').setqflist() end"; options = { desc = "[Q]uickfix Current"; }; plugin = "gitsigns"; }
   { key = "<leader>tb"; action = mkRaw "function() require('gitsigns').toggle_current_line_blame() end"; options = { desc = "[B]lame Current Line"; }; plugin = "gitsigns"; }
-  { key = "<leader>tw"; action = mkRaw "function() require('gitsigns').toggle_word_diff() end"; options = { desc = "[W]ord Diff Highlighting"; }; plugin = "gitsigns"; }
+  { key = "<leader>tW"; action = mkRaw "function() require('gitsigns').toggle_word_diff() end"; options = { desc = "[W]ord Diff Highlighting"; }; plugin = "gitsigns"; }
   { key = "ih"; action = mkRaw "function() require('gitsigns').select_hunk() end"; options = { desc = "Select hunk (text object)"; }; mode = [ "o" "x" ]; plugin = "gitsigns"; }
 ]
