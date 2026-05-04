@@ -5,10 +5,21 @@ in {
     neo-tree = {
       enable = true;
       settings = {
-        close_if_last_window = true;
         enable_git_status = true;
         enable_diagnostics = true;
+        filesystem = {
+          follow_current_file = {
+            enabled = true;
+          };
+        };
+        buffers = {
+          follow_current_file = {
+            enabled = true;
+          };
+        };
         window = {
+          position = "right";
+          auto_expand_width = true;
           mappings = {
             h = mkRaw ''
               function(state)
