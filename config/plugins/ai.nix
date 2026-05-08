@@ -1,13 +1,12 @@
-{ config, pkgs, lib, mcphub-nvim, ... }: # Add mcphub-nvim to arguments
-
+{ config, pkgs, lib, inputs, mcphub-nvim, ... }:
 let
   inherit (lib) mkEnableOption mkOption types;
   cfg = config.plugins;
   mkRaw = lib.nixvim.mkRaw;
-in
-{
-  # extraPackages = [ pkgs.gemini-cli ];
-  extraPlugins = [ mcphub-nvim ];
+  system = pkgs.stdenv.hostPlatform.system;
+in {
+  extraPackages = [ inputs.mcp-hub.packages."${system}".default ];
+  extraPlugins = [ inputs.mcphub-nvim.packages.${system}.default ];
   extraConfigLua = ''
     require("mcphub").setup()
   '';
