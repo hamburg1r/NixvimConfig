@@ -32,4 +32,7 @@
       };
     };
   };
+  plugins.lspconfig = {
+    enable = true;
+  };
 }
