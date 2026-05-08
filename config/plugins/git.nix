@@ -8,6 +8,10 @@
 
     neogit = {
       enable = true;
+      lazyLoad = {
+        enable = true;
+        settings.cmd = "Neogit";
+      };
     };
   };
 }

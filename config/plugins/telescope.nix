@@ -5,6 +5,11 @@
     enable = true;
     settings = {
       defaults = { };
+    lazyLoad = {
+      enable = true;
+      settings = {
+        event = "DeferredUIEnter";
+      };
     };
   };
 

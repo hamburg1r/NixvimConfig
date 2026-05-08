@@ -3,14 +3,31 @@
 {
   plugins = {
     render-markdown = {
-      enable = true;
-      # You can add configuration options for render-markdown here if needed
-      # settings = {
-      #   debounce = 100; # Example setting
-      #   enabled = true; # Example setting
-      # };
+      enable = false;
+      lazyLoad = {
+        enable = true;
+        settings = {
+          ft = [ "markdown" ];
+        };
+      };
     };
-    markdown-preview.enable = true;
-    markview.enable = true;
+    markdown-preview = {
+      enable = true;
+      lazyLoad = {
+        enable = true;
+        settings = {
+          ft = [ "markdown" ];
+        };
+      };
+    };
+    markview = {
+      enable = true;
+      lazyLoad = {
+        enable = true;
+        settings = {
+          ft = [ "markdown" ];
+        };
+      };
+    };
   };
 }
