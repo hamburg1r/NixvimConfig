@@ -32,7 +32,13 @@
       };
     };
   };
+
   plugins.lspconfig = {
     enable = true;
+  };
+
+  plugins.java = {
+    enable = true;
+    settings.spring_boot_tools.enable = true;
   };
 }

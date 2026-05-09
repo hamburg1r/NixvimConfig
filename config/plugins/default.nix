@@ -31,9 +31,4 @@
     ./utils.nix
     ./which-key.nix
   ];
-
-  plugins.java = {
-    enable = true;
-    settings.spring_boot_tools.enable = false;
-  };
 }
