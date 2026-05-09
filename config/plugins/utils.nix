@@ -4,6 +4,10 @@
   plugins = {
     nerdy.enable = true;
 
+    rest = {
+      enable = true;
+    };
+
     # ssr = {
     #   enable = true;
     #   settings = {
