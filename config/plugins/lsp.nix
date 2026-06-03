@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
   lsp = {
     servers = {
       lua_ls = {
@@ -28,7 +28,12 @@
 
       nixd = {
         enable = true;
-        package = null;
+        # package = null;
+      };
+
+      yamlls = {
+        enable = true;
+        # package = null;
       };
     };
   };
@@ -39,11 +44,11 @@
     };
 
     java = {
-        enable = true;
+        enable = false;
         settings.spring_boot_tools.enable = true;
     };
     spring-boot = {
-      enable = true;
+      enable = (config.plugins.java.enable && config.plugins.java.settings.spring_boot_tools.enable);
     };
   };
 }
