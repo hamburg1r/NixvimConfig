@@ -1,5 +1,8 @@
-{ config, pkgs, lib, stripPluginsAttribute, mcphub-nvim, ... }: # Add pkgs to arguments
+{ config, pkgs, lib, stripPluginsAttribute, mcphub-nvim, inputs, ... }: # Add pkgs and inputs to arguments
 {
+  nixpkgs = {
+    source = inputs.nixpkgs.path;
+  };
   # Import all your configuration modules here
   imports = [
     ./plugins

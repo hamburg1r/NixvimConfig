@@ -12,7 +12,7 @@ in
   { key = "<leader>cgw"; action = if config.plugins.snacks.enable then mkRaw "function() Snacks.picker.lsp_workspace_symbols() end" else mkRaw "function() require('telescope.builtin').lsp_workspace_symbols() end"; options = { desc = "[W]orkspace Symbols"; }; plugin = if config.plugins.snacks.enable then "snacks" else "telescope"; }
   { key = "<leader>cga"; action = if config.plugins.snacks.enable then mkRaw "function() Snacks.picker.lsp_declarations() end" else mkRaw "function() require('telescope.builtin').lsp_declarations() end"; options = { desc = "Decl[A]ration"; }; plugin = if config.plugins.snacks.enable then "snacks" else "telescope"; }
   { key = "<leader>cr"; action = mkRaw "vim.lsp.buf.rename"; options = { desc = "[C]ode: [R]ename"; }; plugin = "native"; }
-  { key = "<leader>ca"; action = mkRaw "vim.lsp.buf.code_action"; options = { desc = "[C]ode [A]ction"; }; mode = [ "n" "x" ]; plugin = "native"; }
+  { key = "<leader>ca"; action = mkRaw "function() require('actions-preview').code_actions() end"; options = { desc = "[C]ode [A]ction"; }; mode = [ "n" "x" ]; plugin = "actions-preview"; }
   { key = "<leader>ch"; action = mkRaw "vim.lsp.buf.hover"; options = { desc = "[C]ode: [H]over"; }; plugin = "native"; }
   { key = "K"; action = mkRaw "vim.lsp.buf.hover"; options = { desc = "Hover"; }; plugin = "native"; }
   { key = "<leader>lcc"; action = if config.plugins.snacks.enable then mkRaw "function() Snacks.picker.lsp_config() end" else mkRaw "function() vim.notify('LSP Config picker is unavailable with current configuration.', vim.log.levels.WARN) end"; options = { desc = "[L]SP [C]onfig"; }; plugin = if config.plugins.snacks.enable then "snacks" else "native"; }

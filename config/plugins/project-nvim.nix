@@ -8,6 +8,14 @@
       different_owners = {
         allow = true;
       };
+      telescope = {
+        mappings = {
+          i = {
+            "<C-n>" = false;
+            "<C-;>" = "rename_project";
+          };
+        };
+      };
     };
   };
 }

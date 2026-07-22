@@ -1,6 +1,11 @@
 { config, lib, ... }: {
   plugins.telescope = {
     enable = true;
+    extensions = {
+      ui-select = {
+        enable = true;
+      };
+    };
     settings = {
       defaults = {
         border = true;
