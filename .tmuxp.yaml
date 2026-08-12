@@ -2,10 +2,12 @@ session_name: nixvim
 start_directory: /home/hamburgir/repo/nixvim
 windows:
   - window_name: editor
-    layout: even-horizontal
+    layout: main-horizontal
     panes:
       - nvim
       - agy
   - window_name: runner
     panes:
-      - tmux send-keys 'nix run .'
+      - shell_command:
+        - cmd: nix run .
+          enter: false

@@ -44,7 +44,7 @@
     };
 
     java = {
-        enable = false;
+        enable = true;
         settings.spring_boot_tools.enable = true;
     };
     spring-boot = {
