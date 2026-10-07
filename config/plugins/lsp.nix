@@ -1,4 +1,4 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, lib, ... }: {
   lsp = {
     servers = {
       lua_ls = {
@@ -22,7 +22,12 @@
       };
 
       jdtls = {
-        enable = false;
+        enable = true;
+        package = null;
+      };
+
+      kotlin_language_server = {
+        enable = true;
         package = null;
       };
 
@@ -40,15 +45,7 @@
 
   plugins = {
     lspconfig = {
-        enable = true;
-    };
-
-    java = {
-        enable = true;
-        settings.spring_boot_tools.enable = true;
-    };
-    spring-boot = {
-      enable = (config.plugins.java.enable && config.plugins.java.settings.spring_boot_tools.enable);
+      enable = true;
     };
   };
 }
