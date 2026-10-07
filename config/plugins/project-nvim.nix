@@ -1,6 +1,7 @@
 { ... }: {
   plugins.project-nvim = {
-    enable = true;
+    # Disabled: corrupts its history file and errors on buffer delete
+    enable = false;
     enableTelescope = true;
     settings = {
       enable_autochdir = true;
