@@ -5,7 +5,7 @@ windows:
     layout: main-horizontal
     panes:
       - nvim
-      - agy
+      - opencode
   - window_name: runner
     panes:
       - shell_command:
